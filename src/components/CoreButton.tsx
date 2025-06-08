@@ -6,6 +6,7 @@ type CoreButtonProps = {
   onClick?: () => void;
   selected?: boolean;
   disabled?: boolean;
+  variant?: "default" | "submit";
 };
 
 export const CoreButton: React.FC<CoreButtonProps> = ({
@@ -14,18 +15,21 @@ export const CoreButton: React.FC<CoreButtonProps> = ({
   onClick,
   selected,
   disabled,
+  variant = "default",
 }) => {
   return (
     <button
       className={classNames(
-        "text-white border-3 border-white/75 rounded-2xl text-[2rem] font-bold px-8 py-4",
+        "border-3 border-white/75 rounded-2xl text-[2rem] font-bold px-8 py-4",
         className,
         {
-          "bg-linear-135 from-secondary/80 to-[rgb(0,77,63)] to-70% border-none shadow-xl hover:text-[2rem]":
+          "bg-linear-to-tr from-secondary to-primary border-none shadow-xl hover:text-[2rem]":
             selected,
-          "cursor-pointer hover:border-white/50 duration-200 hover:text-[2.25rem] hover:bg-white/10":
+          "cursor-pointer hover:border-white/50 duration-200 hover:text-[2.25rem]":
             !disabled,
           "opacity-50 cursor-not-allowed": disabled,
+          "bg-white text-primary": variant === "submit",
+          "text-white hover:bg-white/10": variant === "default",
         }
       )}
       onClick={onClick}
