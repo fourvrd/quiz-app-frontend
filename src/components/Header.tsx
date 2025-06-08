@@ -1,17 +1,9 @@
-import { Link } from '@tanstack/react-router'
+import { QuizLogo } from "@/components/QuizLogo";
 
-export default function Header() {
+export const Header = () => {
   return (
-    <header className="p-2 flex gap-2 bg-white text-black justify-between">
-      <nav className="flex flex-row">
-        <div className="px-2 font-bold">
-          <Link to="/">Home</Link>
-        </div>
-
-        <div className="px-2 font-bold">
-          <Link to="/demo/tanstack-query">TanStack Query</Link>
-        </div>
-      </nav>
+    <header className="">
+      <QuizLogo className="w-fit mt-[3rem] ml-[3rem]" />
     </header>
-  )
-}
+  );
+};

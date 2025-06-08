@@ -1,15 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #02715D;
+  --color-secondary: #03C2A0;
+}
 
 body {
   @apply m-0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Afacad", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background: linear-gradient(247deg, #014e40, #212529) fixed;
 }
