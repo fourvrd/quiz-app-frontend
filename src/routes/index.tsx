@@ -4,25 +4,31 @@ import { useQuizCategoriesQuery } from "@/hooks/useQuizCategoriesQuery";
 import { useState } from "react";
 import { QuizSetupModal } from "@/components/QuizSetupModal";
 
+interface QuizSettings {
+  quizCategory: string | null;
+  quizLevel: string | null;
+  quizLength: number | null;
+}
+
 export const Route = createFileRoute("/")({
-  component: App,
+  component: QuizMenu,
 });
 
-function App() {
-  const [quizSettings, setQuizSettings] = useState({
-    quizCategory: null as string | null,
-    quizLevel: null as string | null,
-    quizLength: null as number | null,
+function QuizMenu() {
+  const [quizSettings, setQuizSettings] = useState<QuizSettings>({
+    quizCategory: null,
+    quizLevel: null,
+    quizLength: null,
   });
 
   const { data: categories = [] } = useQuizCategoriesQuery();
 
-  const handleCategorySelect = (quizCategory: string) =>
+  const handleCategorySelect = (quizCategory: string): void =>
     setQuizSettings((prev) => ({ ...prev, quizCategory }));
 
   return (
     <div className="grid grid-cols-2 px-[6rem] pt-[6rem] gap-[6rem]">
-      {categories.map((category) => (
+      {categories.map((category: string) => (
         <MenuButton
           key={category}
           text={category.charAt(0).toUpperCase() + category.slice(1)}
