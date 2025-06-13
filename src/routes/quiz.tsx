@@ -72,7 +72,15 @@ function QuizMain() {
   const correctPercentage = Math.round((correctAnswers / data.length) * 100);
 
   return (
-    <div className="flex place-content-center flex-1 overflow-auto h-[calc(100vh-3rem-79px-3rem)] mt-[3rem]">
+    <div className="flex place-content-center flex-1 overflow-auto h-[calc(100vh-3rem-79px-5rem)] mt-[3rem]">
+      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+      <div className="absolute bottom-[-10vw] right-[-5vw] w-[60vh] aspect-square bg-secondary/50 rounded-full blur"></div>
+      <div className="absolute bottom-[1.5vw] left-[2.5vw] w-[17vh] aspect-square bg-white/50 rounded-full blur"></div>
+      <div className="absolute top-[16.5vw] right-[3vw] w-[15vh] aspect-square bg-white/75 rounded-full blur"></div>
+      <div className="absolute top-[20vw] left-[-4vw] w-[12vh] aspect-square bg-white/30 rounded-full blur"></div>
+      <div className="absolute top-[-3.5vw] left-[35vw] w-[12vh] aspect-square bg-secondary/50 rounded-full blur"></div>
+      <div className="absolute top-[4vw] left-[65vw] w-[8vh] aspect-square bg-white/50 rounded-full blur"></div>
+      </div>
       <div className="w-[85%] h-[85%] mt-[2rem] rounded-3xl overflow-hidden relative">
         <div className="bg-[url('@assets/fingerprints.png')] bg-cover bg-center w-full h-full absolute opacity-35"></div>
         <div className="bg-[#02715D] h-[20%] relative">
