@@ -73,7 +73,7 @@ function QuizMain() {
 
   return (
     <div className="flex place-content-center flex-1 overflow-auto h-[calc(100vh-3rem-79px-3rem)] mt-[3rem]">
-      <div className="w-[90%] h-[90%] rounded-3xl overflow-hidden relative">
+      <div className="w-[85%] h-[85%] mt-[2rem] rounded-3xl overflow-hidden relative">
         <div className="bg-[url('@assets/fingerprints.png')] bg-cover bg-center w-full h-full absolute opacity-35"></div>
         <div className="bg-[#02715D] h-[20%] relative">
           <h1
