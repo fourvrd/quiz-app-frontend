@@ -34,6 +34,7 @@ function QuizMenu() {
           text={category.charAt(0).toUpperCase() + category.slice(1)}
           onClick={() => handleCategorySelect(category)}
           selected={quizSettings.quizCategory === category}
+          className="hover:shadow-2xl"
         />
       ))}
       {quizSettings.quizCategory && (

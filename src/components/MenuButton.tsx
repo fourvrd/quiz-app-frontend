@@ -28,7 +28,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({
         className="h-full w-full absolute -z-10 object-cover"
       />
       <CoreButton
-        className="w-[calc(100%-3rem)] h-[calc(100%-3rem)] m-[1.5rem] text-[1.5rem]"
+        className="w-[calc(100%-3rem)] h-[calc(100%-3rem)] m-[1.5rem] text-[1.5rem] hover:scale-none"
         text={text}
         onClick={onClick}
         selected={selected}
